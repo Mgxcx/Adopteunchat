@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/adopter.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+    <title>Adopter</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <a class="navbar-brand" href="/">Adopte un chat</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Adopter <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/contact">Contact</a>
+          </li>
+
+          <% if (name) { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/signout">Sign out</span></a>
+            </li>
+          <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/signin">Sign in</a>
+            </li>
+          <% } %>
+        </ul>
+      </ul>
+      <span class="navbar-text">
+        Hello <%= name %> !
+      </span>
+      </div>
+    </nav>
+
+    <div class="container-fluid">
+      <div class="row d-flex justify-content-center mt-3">
+        <form class="form-inline mr-3 mb-3 justify-content-center" action="/searchadopter" method="POST">
+          <div class="form-group mr-2">
+            <input type="text" class="form-control" name="department" placeholder="Search department" />
+          </div>
+          <div class="form-group mr-2">
+            <input type="text" class="form-control" name="race" placeholder="Search race" />
+          </div>
+          <div class="form-group mr-2">
+            <input type="text" class="form-control" name="gender" placeholder="Search gender" />
+          </div>
+          <div class="form-group mr-2">
+            <input type="text" class="form-control" name="age" placeholder="Search age" />
+          </div>
+          <div class="form-group">
+            <select class="custom-select mr-sm-2" id="inlineFormCustomSelect" name="sort">
+              <option selected>Sort by...</option>
+              <option value="name">Name</option>
+              <option value="department">Department</option>
+              <option value="race">Race</option>
+              <option value="gender">Gender</option>
+              <option value="age">Age</option>
+            </select>
+         </div>
+          <div class="text-center">
+            <button type="submit" class="btn text-white ml-2">Search</button>
+          </div>
+        </form>
+
+                <!-- Button trigger modal -->
+        <div class="col-12 d-flex justify-content-center">
+          <button type="button" class="btn text-white" data-toggle="modal" data-target="#exampleModal">
+            Confiez-nous un chat à adopter!
+          </button>
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Confiez-nous un chat à adopter!</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <form class="form mr-3 mb-3 justify-content-center" action="/addadopter" method="POST">
+                  <div class="input-group mb-2">
+                    <div class="custom-file">
+                      <input type="file" class="custom-file-input" id="inputGroupFile02" name="src">
+                      <label class="custom-file-label" for="inputGroupFile02">Choose file</label>
+                    </div>
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="">Upload</span>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="name" placeholder="Enter name" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="department" placeholder="Enter department" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="race" placeholder="Enter race" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="gender" placeholder="Enter gender" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="poils" placeholder="Enter coat" />
+                  </div>
+                  <div class="form-group">
+                    <input type="text" class="form-control" name="age" placeholder="Enter age" />
+                  </div>
+                  <div class="text-center mt-1">
+                    <button type="submit" class="btn btn-secondary ml-2">Add</button>
+                  </div>
+                </form>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      
+      </div>
+
+      <div class="row d-flex justify-content-center mt-3">
+        <div class="result">
+          <p class="text-white"><span id="count">0</span> Résultats trouvés</p>
+        </div>
+      </div>
+
+      <div class="row d-flex justify-content-center">
+
+        <% 
+        for(var i=0;i<catList.length;i++){
+        %>
+
+        <div class="col-xs-12 col-sm-6 col-md-4">
+            <div class="image-flip" >
+                <div class="mainflip flip-0">
+                    <div class="frontside">
+                        <div class="card">
+                            <div class="card-body text-center">
+                                <p><img class="img-fluid" src="<%= catList[i].src%>" alt="card image"></p>
+                                <h4 class="card-title"><%= catList[i].name%></h4>
+                                <h5 class="card-text">Département: <span id="r" class="department"><%= catList[i].department%></span></h5>
+                                <div class="row col-xs-4 col-sm-12 justify-content-center mb-5">
+                                <p class="card-text">Race: <span class="race"><%= catList[i].race%></span> - Sexe: <span class="gender"><%= catList[i].gender%></span> - Poils: <%= catList[i].poils%> - Âge: <span class="age"><%= catList[i].age%></span></p>
+                                </div>
+                                <a href="#" class="btn btn-sm"><i class="fa fa-plus"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="backside">
+                        <div class="card">
+                            <div class="card-body text-center mt-4">
+                                <h4 class="card-title">More about that race...</h4>
+                                <p class="card-text"><%= catList[i].description %></p>
+                                <div class="text-center text-white">
+                                  <a href="/contact" class="btn ml-2 text-white">I want that kitty!</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+
+
+        <% } %>
+
+      
+      </div>
+    </div>
+
+    
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+    </script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+    <script src="../javascripts/adopter.js"></script>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #38ada9 !important;
+}
+
+.navbar {
+  background-color: #006266 !important;
+}
+
+.btn {
+  background-color: #006266 !important;
+}
+
+#contact {
+  letter-spacing: 2px;
+}
+#contact a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 575.98px) {
+  #contact {
+    padding-bottom: 800px;
+  }
+  #contact .maps iframe {
+    width: 100%;
+    height: 450px;
+  }
+}
+
+@media (min-width: 576px) {
+  #contact {
+    padding-bottom: 800px;
+  }
+
+  #contact .maps iframe {
+    width: 100%;
+    height: 450px;
+  }
+}
+
+@media (min-width: 768px) {
+  #contact {
+    padding-bottom: 350px;
+  }
+
+  #contact .maps iframe {
+    width: 100%;
+    height: 850px;
+  }
+}
+
+@media (min-width: 992px) {
+  #contact {
+    padding-bottom: 200px;
+  }
+
+  #contact .maps iframe {
+    width: 100%;
+    height: 700px;
+  }
+}
+
+#author a {
+  color: #fff;
+  text-decoration: none;
+}
+/* body {
+  background-color: black;
+  margin-left: 50px;
+  margin-top: 50px;
+}
+.logo {
+  height: 100px;
+}
+
+.top-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.title {
+  display: flex;
+  flex-basis: 50%;
+  font-size: 20px;
+  align-items: center;
+  font-family: "Helvetica", sans-serif;
+  color: white;
+}
+
+.title p {
+  margin-left: 20px;
+  color: #aeb9cd;
+}
+
+.menu {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: right;
+}
+
+.menu ul {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 100px;
+  list-style-type: none;
+}
+
+.menu ul li a {
+  color: #aeb9cd;
+  font-family: "Helvetica", sans-serif;
+  text-decoration: none;
+  font-size: 20px;
+  margin-left: 50px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 80px;
+}
+
+.row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  background-color: #ffffff;
+  border-top: 1px solid #dadada;
+  border-right: 1px solid #dadada;
+  border-left: 1px solid #dadada;
+  padding: 15px;
+  background-color: #aeb9cd;
+}
+
+input {
+  width: 40%;
+  height: 30px;
+  margin: 0 0 10px 0;
+}
+
+.btn-default {
+  border-color: #aeb9cd;
+  border-radius: 5px;
+  background-color: #aeb9cd;
+  color: black;
+  font-size: 16px;
+  padding: 6px;
+  margin-right: 15px;
+} */

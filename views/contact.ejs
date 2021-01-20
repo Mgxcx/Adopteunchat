@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../stylesheets/contact.css" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Contact</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+      <a class="navbar-brand" href="/">Adopte un chat</a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarText">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/adopter">Adopter</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Contact <span class="sr-only">(current)</span></a>
+          </li>
+
+          <% if (name) { %>
+            <li class="nav-item">
+              <a class="nav-link" href="/signout">Sign out</span></a>
+            </li>
+            <% } else { %>
+              <li class="nav-item">
+                <a class="nav-link" href="/signin">Sign in</a>
+              </li>
+            <% } %>
+        </ul>
+      </ul>
+      <span class="navbar-text">
+        Hello <%= name %> !
+      </span>
+      </div>
+    </nav>
+
+
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
+<div class="container-fluid">
+  <div class="row" id="contact">
+    <div class="container mt-5" >
+
+        <div class="row" style="height:550px;">
+          <div class="col-md-6 maps" >
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2615.08481651413!2d2.624851416030602!3d49.04701087930644!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e63d1c07b8c037%3A0x9814ce4c641fdc7c!2s2%20Rue%20du%20Puits%20d&#39;Affetet%2C%2077230%20Moussy-le-Vieux!5e0!3m2!1sfr!2sfr!4v1605195901345!5m2!1sfr!2sfr" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+          </div>
+          <div class="col-md-6">
+            <h2 class="text-uppercase mt-3 font-weight-bold text-white">CONTACT</h2>
+            <form action="">
+              <div class="row">
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mt-2" placeholder="First name" id="name-input" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="text" class="form-control mt-2" placeholder="Last name" id="lastname-input" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="email" class="form-control mt-2" placeholder="Email" id="email-input" required>
+                  </div>
+                </div>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <input type="number" class="form-control mt-2" placeholder="Phone" id="phone-input"  required>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Tell us everything :)" rows="3" required></textarea>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <button class="btn text-white" type="submit">Send</button>
+                </div>
+              </div>
+            </form>
+            <div class="text-white">
+            <h2 class="text-uppercase mt-4 font-weight-bold">FIND US!</h2>
+
+            <i class="fas fa-phone mt-3"></i> <a href="tel:+33649085453">+33 6 49 08 54 53</a><br>
+            <i class="fa fa-envelope mt-3"></i> <a href="mailto:margaux.chevreux@mgxcx.fr">margaux.chevreux@mgxcx.fr</a><br>
+            <i class="fas fa-globe mt-3"></i> 2 Bis B rue du Puits d'Affetet 77230 Moussy le Vieux<br>
+            <div class="my-4">
+            <a href="https://www.linkedin.com/in/margaux-chevreux-377586a4/"><i class="fab fa-facebook fa-3x pr-4"></i></a>
+            <a href="https://www.facebook.com/Margaux.Chevreux"><i class="fab fa-linkedin fa-3x"></i></a>
+            </div>
+            </div>
+          </div>
+
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
